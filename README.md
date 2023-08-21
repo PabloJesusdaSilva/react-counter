@@ -2,4 +2,4 @@
 
 Contador criado com React
 
-Deploy: (em breve)
+Deploy: https://react-counter-ashy.vercel.app/
