@@ -4,19 +4,19 @@ import './Counter.css';
 
 const Counter = () => {
   const [contador, setCounter] = useState(0);
-  const handleOnClick = (operator) => {
-    const newValue = operator === '+'
-      ? operator + 1
-      : operator - 1
+  const handleOnClick = operador => {
+    const newValue = operador === '+' ? contador + 1: contador - 1
 
-      setCounter(newValue);
+    setCounter(newValue);
   }
 
   return (
     <div className="counter">
-      <span>{contador}</span>
-      <button onClick={() => handleOnClick('-')}>-</button>
-      <button onClick={() => handleOnClick('+')}>+</button>
+      <span className="span-counter">{contador}</span>
+      <div>
+        <button onClick={() => handleOnClick('-')}>-</button>
+        <button onClick={() => handleOnClick('+')}>+</button>
+      </div>
     </div>
   );
 }
