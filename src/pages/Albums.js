@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Template from "./Template";
-import Loading from "./Loading"
+import Loading from "../components/Loading"
 
 const Albums = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,7 +18,7 @@ const Albums = () => {
   }, []);
 
   return (
-    <Template title="Álbuns">
+    <>
       <Loading visible={isLoading} />
 
       {
@@ -31,7 +30,7 @@ const Albums = () => {
           )
         })
       }
-    </Template>
+    </>
   )
 }
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import Template from "./Template";
-import Loading from "./Loading";
+import Loading from "../components/Loading";
 
 const Users = () => {
   const [isLoading, setIsLoanding] = useState(false);
@@ -19,7 +18,7 @@ const Users = () => {
   }, []);
 
   return (
-    <Template title="Usuários">
+    <>
       <Loading visible={isLoading} />
       {
         users.map(user => {
@@ -30,7 +29,7 @@ const Users = () => {
           )
         })
       }
-    </Template>
+    </>
   );
 }
 
