@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 
 const Albums = () => {
-  const [loading, setLoading] = useState(false)
-  const [albuns, setAlbums] = useState([])
+  const [loading, setLoading] = useState(false);
+  const [albuns, setAlbums] = useState([]);
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
 
     fetch('https://jsonplaceholder.typicode.com/albums')
       .then(response => response.json())
       .then(data => {
-        setLoading(false)
-        setAlbums(data)
-      })
-  }, [])
+        setLoading(false);
+        setAlbums(data);
+      });
+  }, []);
 
   return (
     <>
