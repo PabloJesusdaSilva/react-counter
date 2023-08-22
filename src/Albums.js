@@ -7,8 +7,8 @@ const Albums = () => {
     fetch('https://jsonplaceholder.typecode.com/albums')
       .then(res => res.json)
       .then(data => {
-        setAlbum(data);
-      });
+        setAlbums(data)
+      })
   }, [])
 
   return (
@@ -23,7 +23,6 @@ const Albums = () => {
           ) 
         })
       }
-
     </>
   );
 }
