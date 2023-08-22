@@ -2,8 +2,9 @@ import React, { useState } from "react";
 
 import Albums from "./Albums";
 import Counter from "./Counter";
+import Users from "./Users";
 
-const defaultPage = ' albums';
+const defaultPage = 'albums';
 
 const pages = {
   albums: {
@@ -12,12 +13,15 @@ const pages = {
   },
   counter: {
     text: 'Contador',
-    component: Counter
+    component: Counter,
+  }, 
+  users: {
+    text: 'Usuários',
+    component: Users,
   }
 }
 
 const App = () => {
-
   const [page, setPage] = useState(defaultPage);
 
   const handleChangePage = page => {
