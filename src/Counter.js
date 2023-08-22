@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import Template from "./Template";
 import './Counter.css';
 
 const Counter = () => {
@@ -17,14 +18,16 @@ const Counter = () => {
   }
 
   return (
-    <div className="counter">
-      <span className="span-counter">{contador}</span>
-      <div>
-        <button onClick={() => handleOnClick('-')}>-</button>
-        <button onClick={() => handleOnClick('+')}>+</button>
-        <button onClick={() => setTeste(321)}>Teste</button>
+    <Template title="Contador">
+      <div className="counter">
+        <span className="span-counter">{contador}</span>
+        <div>
+          <button onClick={() => handleOnClick('-')}>-</button>
+          <button onClick={() => handleOnClick('+')}>+</button>
+          <button onClick={() => setTeste(321)}>Teste</button>
+        </div>
       </div>
-    </div>
+    </Template>
   );
 }
 
