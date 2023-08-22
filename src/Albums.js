@@ -16,9 +16,11 @@ const Albums = () => {
       <h2>Álbuns</h2>
       {
         albums.map(album => {
-          <div>
-            <span>{album.title} - {album.id}</span>
-          </div>
+          return (
+            <div>
+              <span>{album.title} - {album.id}</span>
+            </div>
+          ) 
         })
       }
 
