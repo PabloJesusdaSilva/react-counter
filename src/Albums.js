@@ -1,30 +1,36 @@
 import React, { useEffect, useState } from "react";
 
 const Albums = () => {
-  const [albums, setAlbums] = useState();
+  const [loading, setLoading] = useState(false)
+  const [albuns, setAlbums] = useState([])
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typecode.com/albums')
-      .then(res => res.json)
+    setLoading(true)
+
+    fetch('https://jsonplaceholder.typicode.com/albums')
+      .then(response => response.json())
       .then(data => {
+        setLoading(false)
         setAlbums(data)
       })
   }, [])
 
   return (
     <>
-      <h2>Álbuns</h2>
       {
-        albums.map(album => {
+        loading === true ? 'Carregando...' : ''
+      }
+      {
+        albuns.map(album => {
           return (
             <div>
-              <span>{album.title} - {album.id}</span>
+              <span>{album.title} - id: {album.id}</span>
             </div>
-          ) 
+          )
         })
       }
     </>
-  );
+  )
 }
 
 export default Albums;

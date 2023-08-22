@@ -4,7 +4,7 @@ import Albums from "./Albums";
 import Counter from "./Counter";
 import Users from "./Users";
 
-const defaultPage = 'albums';
+const defaultPage = 'counter';
 
 const pages = {
   albums: {
